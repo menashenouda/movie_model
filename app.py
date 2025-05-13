@@ -142,7 +142,7 @@ def extract_movie_titles(query):
     
     return validated_titles[0] if validated_titles else ""
 
-@app.route('/chat', methods=['POST'])
+@app.route('/movies_chatbot', methods=['POST'])
 def chat_endpoint():
     data = request.json
     user_input = data.get('message')
@@ -189,4 +189,4 @@ def chat_endpoint():
     return jsonify({'response': response})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5004)
